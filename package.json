@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"jade": "jade -w lib/index.jade -P -o public",
+		"stylus": "stylus -u nib -w -o public/css lib/estilos.styl",
+		"brow": "browserify -T babelify -T watchify lib/main.js > public/js/code.js",
+		"babel": "babel --watch lib/code.js --out-dir public/js ",
+		"uglify": "uglifyjs lib/code.js -o public/js/code.js"
+	}
+}

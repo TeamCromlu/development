@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+html(lang="es")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport",content="width=device-width, minimum-scale=1, maximum-scale=1")
+	meta(name="description",content=" Mi portafolio parofesiona blabla")
+	title Juan Gimenez Herrera
+	//- favicon
+	link(rel="icon",type="image/png", href="image/favicon.ico")
+	
+	//- Links de fuentes del sitio
+	link(rel="stylesheet",type='text/css', href="http://fonts.googleapis.com/css?family=Pacifico")
+
+	//- Links de Estilos
+	link(rel="stylesheet", href="css/estilos.css")
+
+body
+
+header.Header-main
+	.Header-main__box
+		figure.Header-main__avatar
+			img(src="image/avatar.png", alt="Juan Gimenez Focal")
+		h1.Header-main__title Juan Gimenez Focal
+		p.Header-main__description Diseñador grafico profesional
+
+
+section.About-me
+	.About-me__box
+		article.About-me__caja1
+			input(type="text",placeholder="Escribir texto aqui", id="txt_name")
+			input(type="button",value="Tocame",id="btn_tocame")
+				
+		//- 		//- SE PASAN COMO ARRAYS Y VARIABLES 
+		//- 	each name in["Joel Gonzales", "Maycon Huayapa"]
+		//- 		include ./about-me/template.jade
+
+		//- article.About-me__caja2
+		//- 	each card in [1,2,3,4,5]
+		//- 		include ./about-me/template.jade
+
+		//- 	each name2 in["Joel Gonzales", "Maycon Huayapa"]
+		//- 			include ./contacto/template.jade
+
+section.habilidades
+	.habilidades__box
+		each caja in [1,2,3,4,5,6]
+			article.habilidades__item
+				h2 un titulo epico
+				figure
+					img(src="image/cover.jpg", alt="epica imagen")
+				p descriptcion epicamente hablando en todo el tiempo de las mejores formas posibles
+
+
+section.about-me
+	.about-me__box
+		article.about-me__description
+			h2.descriptcion__title Hola soy Joel :)
+			p.descriptcion__content Me encanta el desarrollo web y trabajar con empresas super cool, aportar con la comunidad y trabajar en un ambiente de trabajo conforme a lo que el actual mundo moderno de la web necesita, una revelancia para crecer y aportar lo correcto para el mundo de la tecnologia , anime y geek, sigueme en @joelengt ;)
+		article.about-me__avatar
+			figure.avatar__imagen 
+			img(src="image/avatar.jpg", alt="joel gonzales tipismana")
+			p.avatar__twitter
+				@joelengt
+
+
+//- include ./about-me/template.jade
+//- include ./contacto/template.jade
+
+
+script(type="text/javascript",src="http://code.jquery.com/jquery-1.11.2.min.js")
+script(type="text/javascript",src="js/main.js")

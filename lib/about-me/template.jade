@@ -1,0 +1,53 @@
+section(class="habilidades")
+	div(class="habilidades__box")
+		article(class="habilidades__caja")
+			each card in [1,2,3,4,5]
+				include ../card/template.jade
+		article(class="habilidades__caja2")
+			div(class="habilidades__caja2--batalla")
+				//- - name="Joel Gonzales"
+				each name in["Joel Gonzales", "Maycon Huayapa"]
+					include ../status/template.jade
+
+			div(class="habilidades__caja2--ballas")
+				div(class="ballas")
+					div(class="ballas--enemigo")
+						each card in [1,2,3,4,5]
+							include ../card/template.jade
+					div(class="ballas--player")
+						each card in [1,2,3,4,5]
+							include ../card/template.jade
+			div(class="habilidades__caja2--status")
+				- text= "OMG ese ataque es muy fuerte auch"	
+				include ../phases/template.jade
+
+		article(class="habilidades__caja3")
+			each card in [1,2,3,4,5]
+				include ../card/template.jade
+		
+
+
+section.habilidades
+	.habilidades__box
+		each caja in [1,2,3,4,5,6]
+			article.habilidades__item
+				h2 un titulo epico
+				figure
+					img(src="image/cover.jpg", alt="epica imagen")
+				p descriptcion epicamente hablando en todo el tiempo de las mejores formas posibles
+
+
+section.about-me
+	.about-me__box
+		article.about-me__description
+			h2.descriptcion__title Hola soy Joel :)
+			p.descriptcion__content Me encanta el desarrollo web y trabajar con empresas super cool, aportar con la comunidad y trabajar en un ambiente de trabajo conforme a lo que el actual mundo moderno de la web necesita, una revelancia para crecer y aportar lo correcto para el mundo de la tecnologia , anime y geek, sigueme en @joelengt ;)
+		article.about-me__avatar
+			figure.avatar__imagen 
+			img(src="image/avatar.jpg", alt="joel gonzales tipismana")
+			p.avatar__twitter
+				@joelengt
+
+script(src="")
+
+
